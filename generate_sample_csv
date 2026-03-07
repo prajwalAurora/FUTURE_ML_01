@@ -1,0 +1,24 @@
+def generate_sample_csv(filename="sample_medical_data.csv"):
+    global df
+    dates = pd.date_range(start="2026-01-01", periods=60)
+    medicines = ["Paracetamol", "Ibuprofen", "Amoxicillin", "Vitamin C",
+                 "Aspirin", "Cetirizine", "Metformin", "Omeprazole"]
+    data = []
+    for med in medicines:
+        demand = np.random.randint(50, 150, size=len(dates))
+        campaign = np.random.choice([0, 1], size=len(dates))
+        holiday = np.random.choice([0, 1], size=len(dates))
+        for i in range(len(dates)):
+            data.append([dates[i], med, demand[i], campaign[i], holiday[i]])
+    
+    # Always overwrite
+    df = pd.DataFrame(data, columns=["Date", "Medicine", "Units_Sold", "Campaign", "Holiday"])
+    df.to_csv(filename, index=False)
+    
+    # Update Combobox
+    medicine_list = df["Medicine"].unique().tolist()
+    medicine_combo["values"] = medicine_list
+    if medicine_list:
+        medicine_combo.current(0)
+    
+    messagebox.showinfo("Sample CSV Generated", f"{filename} created and loaded with {len(medicine_list)} medicines!")
