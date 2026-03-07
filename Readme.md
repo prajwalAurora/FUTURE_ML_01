@@ -68,5 +68,11 @@ If no dataset is loaded, the system automatically generates realistic sample pha
 
 This Medical Demand Forecasting System combines machine learning with practical business analysis. XGBoost is recommended as the primary model due to its superior forecasting accuracy and industry relevance.
 
+
+<img width="1206" height="621" alt="image" src="https://github.com/user-attachments/assets/8a0eefe8-88de-4418-802d-ce36758daf27" />
+
+<img width="1208" height="615" alt="image" src="https://github.com/user-attachments/assets/ea8aefc0-4f28-492e-9120-37b4ff6b2dfe" />
+
+
 <img width="676" height="696" alt="{BC12A9A4-C3C6-4897-AC01-B545D1E3F085}" src="https://github.com/user-attachments/assets/e23025e6-2759-4ffc-9d93-09d617b22814" />
 
